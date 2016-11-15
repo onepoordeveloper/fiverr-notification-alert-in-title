@@ -1,9 +1,10 @@
 {
-  "name": "__MSG_appName__",
-  "version": "0.0.1",
-  "author" : "ahmad.pgu1@hotmail.com"
+  "name": "Fiverr Notification Icon in Title",
+  "short_name": "Fiverr Notification Icon in Title",
+  "version": "1.1",
+  "author" : "ahmad.pgu1@hotmail.com",
   "manifest_version": 2,
-  "description": "__MSG_appDescription__",
+  "description": "This Google Chrome Extension will change the Fiverr Icon whenever a notification is received.",
   "icons": {
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"
@@ -22,8 +23,7 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "https://www.fiverr.com/*"
       ],
       "js": [
 		"scripts/jquery-2.1.4.js",
@@ -32,5 +32,6 @@
       "run_at": "document_end",
       "all_frames": false
     }
-  ]
+  ],
+  "web_accessible_resources": ["images/fiverr-red.png"]
 }
