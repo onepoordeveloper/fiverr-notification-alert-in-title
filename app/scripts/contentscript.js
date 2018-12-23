@@ -13,12 +13,4 @@ var checkForNotification = function(){
     else{
         $("link[rel='shortcut icon']").attr("href", oldFav);
     }
-
-
-    /*if ($("li[data-gtm-label='inbox']").hasClass("marked")){
-        $("link[rel='shortcut icon']").attr("href", redFav);
-    }
-    else{
-        $("link[rel='shortcut icon']").attr("href", oldFav);
-    }*/
 };
