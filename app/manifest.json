@@ -10,7 +10,7 @@
       {
          "all_frames": false,
          "js": [
-            "scripts/jquery-2.1.4.js",
+            "scripts/jquery-3.4.1.min.js",
             "scripts/contentscript.js"
          ],
          "matches": [
