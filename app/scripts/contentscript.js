@@ -1,16 +1,16 @@
 'use strict';
 
-setInterval(function(){
+setInterval(function () {
     checkForNotification();
-},5000);
+}, 5000);
 
-var checkForNotification = function(){
+var checkForNotification = function () {
     var redFav = chrome.extension.getURL("images/fiverr-red.png");
     var oldFav = "https://www.fiverr.com/favicon.ico";
-    if ($(".marked").length > 0){
+    if ($(".unread").length > 0) {
         $("link[rel='shortcut icon']").attr("href", redFav);
     }
-    else{
+    else {
         $("link[rel='shortcut icon']").attr("href", oldFav);
     }
 };
