@@ -8,9 +8,9 @@ var checkForNotification = function () {
     var redFav = chrome.extension.getURL("images/fiverr-red.png");
     var oldFav = "https://www.fiverr.com/favicon.ico";
     if ($(".unread").length > 0) {
-        $("link[rel='shortcut icon']").attr("href", redFav);
+        $("link[rel='icon']").attr("href", redFav);
     }
     else {
-        $("link[rel='shortcut icon']").attr("href", oldFav);
+        $("link[rel='icon']").attr("href", oldFav);
     }
 };
