@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header class="head">
+        <img src="images/icon-16.png" alt="" width="16" height="16" />
+        <h1>Fiverr Alert</h1>
+      </header>
+
+      <label class="row" for="soundEnabled">
+        <span class="label">Notification sound</span>
+        <input type="checkbox" id="soundEnabled" class="switch" />
+      </label>
+
+      <label class="row" for="volume">
+        <span class="label">Volume</span>
+        <input type="range" id="volume" min="0" max="100" step="1" />
+      </label>
+
+      <button id="test" type="button" class="test">Test sound</button>
+
+      <p class="note">The favicon always turns red on unread items. Sound needs
+        the Fiverr tab to have been interacted with at least once.</p>
+    </main>
+
+    <script src="scripts/chime.js"></script>
+    <script src="scripts/popup.js"></script>
+  </body>
+</html>

@@ -2,14 +2,18 @@
   "manifest_version": 3,
   "name": "Fiverr Notification Icon in Title",
   "short_name": "Fiverr Notification Icon in Title",
-  "version": "1.4.0",
-  "description": "This browser extension will change the Fiverr Icon to red when an unread notification or message is detected.",
+  "version": "1.6.0",
+  "description": "Turns the Fiverr tab icon red and plays an optional chime when a new message or notification arrives.",
   "author": "onepoordeveloper@gmail.com",
   "action": {
+    "default_popup": "popup.html",
     "default_icon": {
       "16": "images/icon-16.png",
       "128": "images/icon-128.png"
     }
+  },
+  "background": {
+    "service_worker": "scripts/background.js"
   },
   "icons": {
     "16": "images/icon-16.png",
@@ -18,7 +22,7 @@
   "content_scripts": [
     {
       "matches": ["https://www.fiverr.com/*"],
-      "js": ["scripts/contentscript.js"],
+      "js": ["scripts/chime.js", "scripts/contentscript.js"],
       "run_at": "document_end",
       "all_frames": false
     }
@@ -29,7 +33,7 @@
       "matches": ["https://www.fiverr.com/*"]
     }
   ],
-  "permissions": [],
+  "permissions": ["storage"],
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlLZLXaBkE1o0rnX/sK6eme2oEZf7LT/Yo4aKeM6dMDDHUCru/Q8N/f2OVJJvPMCJHauxhosdheXZ6K8hGAQf6lBMvDiVg0hDnLRLlxkoG/795OI41wvqMIoN6YpHmuQ9Hz0oMTtSfX9rEiEXxQlOwUWWZkQyAHFJzgFqPZk3G1wbBPSZixFksTIPiu78mBTFbXTCVP+ATNEqjMTTfeLAiAQ633ekkKpEELZ5qpctjwy8bs8rbvBZHmZZjfGfFDoh2DxLRyrBD1pMll0rsgO7zTS5n3MzQfBQoSrEkx/QZlmMQ3Z9ISzmRvH51UPWrKqCMmMzj6h/5Y+55i2CBWqq3wIDAQAB",
   "update_url": "https://clients2.google.com/service/update2/crx"
 }
