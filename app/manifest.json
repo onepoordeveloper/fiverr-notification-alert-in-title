@@ -18,7 +18,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "fiverr-alert@onepoordeveloper.github.io",
+      "id": "{145e2028-4b50-47d7-b7df-9eae0683bc74}",
       "data_collection_permissions": {
         "required": ["none"]
       }
