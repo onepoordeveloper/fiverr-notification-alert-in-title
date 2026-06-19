@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Fiverr Notification Icon in Title",
   "short_name": "Fiverr Notification Icon in Title",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Turns the Fiverr tab icon red and plays an optional chime when a new message or notification arrives.",
   "author": "onepoordeveloper@gmail.com",
   "action": {
@@ -13,7 +13,16 @@
     }
   },
   "background": {
-    "service_worker": "scripts/background.js"
+    "service_worker": "scripts/background.js",
+    "scripts": ["scripts/background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "fiverr-alert@onepoordeveloper.github.io",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
   },
   "icons": {
     "16": "images/icon-16.png",
